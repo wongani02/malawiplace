@@ -1,0 +1,105 @@
+{% extends 'malawiplace_app/globals.html' %}
+{% load static %} 
+{% block content %}
+            <section class="bg-image-06">
+              <div class="breadcrumb-wrapper">
+                <div class="container context-dark section-30 section-xl-top-60">
+                  <h5>Our Latest News</h5>
+                  <h1 class="text-ubold"> Blog</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{% url 'Home' %}">Home</a></li>
+                    <!-- <li><a href="#">Blog</a></li> -->
+                    <li>Blog
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+      <section class="section-80 section-lg-120 bg-gray-lighter">
+        <div class="container container-wide text-lg-left">
+          <div class="row row-50 justify-content-sm-center justify-content-xxl-between">
+            <div class="order-lg-1 col-lg-7 col-xl-8 col-xxl-8">
+              <div class="row row-30">
+                {% for item in page %}
+                <div class="col-lg-12 col-md-6 col-xl-6">
+                        <!-- Post masonry style-->
+                        
+                        <div class="post-blog-masonry post">
+                          <img class="img-responsive center-block" style="max-height: 320px;" src="{{ item.img.url }}" width="570" height="400" alt="">
+                          <div class="caption">
+                            <div class="post-blog-date"></div>
+                            <div class="small">{{item.date}}</div>
+                          </div>
+                          <div class="post-blog-masonry-body">
+                            <div class="post-blog-meta">
+                              <ul class="group-42">
+                                <li class="post-blog-tag"><span class="icon"></span><a class="text" href="#">{{item.category}}</a></li>
+                                <li class="post-blog-comments"><span class="icon"></span><span class="text">23</span></li>
+                                <li class="post-blog-views"><span class="icon"></span><span class="text">684</span></li>
+                              </ul>
+                            </div>
+                            <h4 class="post-blog-masonry-title text-bold"><a class="text-primary-dr" href="{% url 'blog_single' item.id %}">{{item.title}}</a></h4>
+                            <p>{{item.content|slice:":200"|safe}}</p>
+                            
+                          </div>
+                        </div>
+                        
+                        
+                      </div>
+                {% endfor %}
+              
+              </div>
+                    <!-- Bootstrap Pagination-->
+                    <ul class="pagination pagination-offset">
+                      {% if page.has_previous %}
+                        <li><a href="{% url 'restrants' %}?page=1">1</a></li>
+                        <li ><a href="{% url 'restrants' %}?page={{ page.previous_page_number }}" ><span class="fa-chevron-left" aria-hidden="true"></span></a></li>
+                      {% endif %}
+
+                      {% for num_page in page.paginator.page_range %}
+                        {% if page.number == num_page %}
+                          <li class="active"><a href="{% url 'restrants' %}?page={{ num_page }}"><span>{{num_page}}</span></a></li>
+                        {% else %}
+                          <li><a href="{% url 'restrants' %}?page={{ num_page }}">{{num_page}}</a></li>
+                        {% endif %}
+                      {% endfor %}
+
+                      {% if page.has_next %}
+                        <li><a href="{% url 'restrants' %}?page={{ page.next_page_number }}" ><span class="fa-chevron-right" aria-hidden="true"></span></a></li>
+                      {% endif %}
+                    </ul>
+            </div>
+            <div class="col-lg-5 col-xl-4 col-xxl-3">
+              <aside class="text-md-left">
+                <div class="row row-60 row-lg-90">
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">Search</h5>
+                    <!-- RD Search-->
+                    <form class="form-inline rd-search" action="{% url 'blog_search' %}" method="post">
+                      {% csrf_token %}
+                      <div class="form-wrap">
+                        <!-- <label class="form-label" for="rd-search-form-input">Search</label> -->
+                        <input class="form-input" id="rd-search-form-input" type="text" name="searched" autocomplete="off">
+                      </div>
+                      <button class="button button-primary button-sm button-naira button-naira-up" type="submit"><span class="icon fa-search"></span><span>Search</span></button>
+                    </form>
+                  </div>
+                  
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">Gallery</h5>
+                    <div class="row row-md-gutter" data-lightgallery="group">
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="800x450" href="{% static 'images/overview-01.jpg' %}"><img class="img-responsive center-block" src="{% static 'images/gallery-48.jpg' %}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="384x560" href="{% static 'images/post-36.jpg' %}"><img class="img-responsive center-block" src="{% static 'images/gallery-49.jpg' %}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="576x372" href="{% static 'images/gallery-20.jpg' %}"><img class="img-responsive center-block" src="{% static 'images/gallery-50.jpg' %}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="384x560" href="{% static 'images/post-43.jpg' %}"><img class="img-responsive center-block" src="{% static 'images/gallery-51.jpg' %}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="420x590" href="{% static 'images/gallery-28.jpg' %}"><img class="img-responsive center-block" src="{% static 'images/gallery-52.jpg' %}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="420x590" href="{% static 'images/gallery-25.jpg' %}"><img class="img-responsive center-block" src="{% static 'images/gallery-53.jpg' %}" width="185" height="185" alt=""></a></div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endblock %}

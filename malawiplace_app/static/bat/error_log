@@ -1,0 +1,10 @@
+[13-Mar-2022 11:55:45 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45
+[18-Mar-2022 15:22:18 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45
+[19-Mar-2022 03:44:05 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45
+[20-Mar-2022 19:15:26 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45
+[26-Mar-2022 15:52:54 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45
+[02-Apr-2022 09:40:45 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45
+[09-Apr-2022 02:17:06 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45
+[10-Apr-2022 12:54:19 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45
+[13-Apr-2022 11:03:05 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45
+[18-Apr-2022 10:09:39 Etc/UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/malamdey/public_html/bat/phpmailer/PHPMailerAutoload.php on line 45

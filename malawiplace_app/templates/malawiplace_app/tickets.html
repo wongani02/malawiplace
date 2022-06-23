@@ -1,0 +1,131 @@
+{% extends 'malawiplace_app/globals.html' %}
+{% load static %} 
+{% load custom_template_tags %}
+{% block content %}
+            <section class="bg-image-06">
+              <div class="breadcrumb-wrapper">
+                <div class="container context-dark section-30 section-xl-top-60">
+                  <h5>Pick the Best Ticket</h5>
+                  <h1 class="text-ubold">Tickets List</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{% url 'Home' %}">Home</a></li>
+                    <!-- <li><a href="#">Pages</a></li> -->
+                    <li>Tickets List
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+      <section class="section-80 section-lg-120 bg-gray-lighter">
+        <div class="container container-wide">
+          <div class="row row-50 text-xl-left">
+            <div class="col-xl-8">
+              <div class="inset-xxl-right-80">
+                <h2 class="text-ubold">Search results for flights to {{searched}}</h2>
+                <!-- <h5 class="text-gray">2 Adults, economy</h5> -->
+                <hr class="divider divider-lg-left divider-primary divider-80">
+                <!-- <div class="row row-20 row-offset-7 justify-content-sm-between text-left">
+                  <div class="col-md-8 col-lg-6 col-xxl-4">
+                    <div class="row row-20">
+                      <div class="col-md-6">
+                        <div class="form-wrap">
+                          <label class="form-label-outside" for="departure-date">Departure</label>
+                          <input class="form-input form-input-gray" id="departure-date" type="text" data-time-picker="date" data-constraints="@Required" name="departure">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-wrap">
+                          <label class="form-label-outside" for="return-date">Return</label>
+                          <input class="form-input form-input-gray" id="return-date" type="text" data-time-picker="date" data-constraints="@Required" name="return">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-xxl-3"><span class="small">Sort by</span>
+                    
+                    <select class="form-input select-filter" data-placeholder="Select an option" data-minimum-results-for-search="Infinity" data-constraints="@Required">
+                      <option>Price: low to high</option>
+                      <option value="2">Item 1-1</option>
+                      <option value="3">Item 1-2</option>
+                      <option value="4">Item 1-2</option>
+                      <option value="5">Item 2-1</option>
+                      <option value="6">Item 2-2</option>
+                      <option value="7">Item 2-3</option>
+                    </select>
+                  </div>
+                </div> -->
+                <ul class="list-tickets">
+                  {% if searched %}
+                    {% for item in flight_search %}
+                      <li class="list-item">
+                        <div class="list-item-inner">
+                          <div class="list-item-main">
+                            <div class="list-item-top">
+                              <div class="list-item-logo"><img src="{% static 'images/logo-01.jpg' %}" alt=""></div>
+                              <div class="list-item-content">
+                                <div class="list-item-content-left">
+                                  <div class="text-bold text-base">{{item.depature_date}}</div><span class="small d-block">{{item.depature_place}}</span>
+                                </div>
+                                <div class="list-item-content-line-wrapper small">
+                                  <div class="list-item-content-line-top">6h 50m</div>
+                                  <div class="list-item-content-line"></div>
+                                  <div class="list-item-content-line-bottom text-info-dr">Direct</div>
+                                </div>
+                                <div class="list-item-content-right">
+                                  <div class="text-bold text-base">7:45pm</div><span class="small d-block">
+                                    {{ item.Final_destination }}</span>
+                                </div>
+                              </div>
+                            </div>
+                            <hr class="divider divider-wide">
+                            <!-- <div class="list-item-bottom">
+                              <div class="list-item-logo"><img src="{% static 'images/logo-01.jpg' %}" alt=""></div>
+                              <div class="list-item-content">
+                                <div class="list-item-content-left">
+                                  <div class="text-bold text-base">9:50pm</div><span class="small d-block">LGW</span>
+                                </div>
+                                <div class="list-item-content-line-wrapper small">
+                                  <div class="list-item-content-line-top">18h 40m</div>
+                                  <div class="list-item-content-line"></div>
+                                  <div class="list-item-content-line-bottom"><span class="text-primary-dr">1 stop</span><span> DUB</span></div>
+                                </div>
+                                <div class="list-item-content-right">
+                                  <div class="text-bold text-base">11:30am (+1)</div><span class="small d-block">JFK</span>
+                                </div>
+                              </div>
+                            </div> -->
+                          </div>
+                          <div class="list-item-footer"><span class="small">7 deals from</span>
+                            <h5 class="text-bold list-item-price"> $ {{item.price}}</h5><a class="button button-primary button-xs button-no-shadow" href="#">select</a>
+                          </div>
+                        </div>
+                        <div class="small text-gray-light list-item-subtitle">Operated by {{item.airline.airline_name}}</div>
+                      </li>
+                    {% empty %}
+                      <h3>Sorry, no matching flights available at the moment</h3>
+                    {% endfor %}
+
+                  {% endif %}
+
+                </ul>
+                      <!-- Bootstrap Pagination-->
+                      <!-- <ul class="pagination">
+                        <li class="disabled"><span aria-label="Previous"><span class="fa-chevron-left" aria-hidden="true"></span></span></li>
+                        <li class="active"><span>1</span></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#" aria-label="Next"><span class="fa-chevron-right" aria-hidden="true"></span></a></li>
+                      </ul> -->
+              </div>
+            </div>
+            <div class="col-xl-4 tickets-aside">
+              
+              <h5 class="text-bold hr-title">Latest Blog Posts</h5>
+              <div class="row row-50 row-md-30 justify-content-sm-center text-md-left">
+                {% recent_blogs_searched %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

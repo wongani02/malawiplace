@@ -1,0 +1,119 @@
+{% extends 'malawiplace_app/globals.html' %}
+{% load static %} 
+{% block content %}
+      <section class="bg-image-06">
+        <div class="breadcrumb-wrapper">
+          <div class="container context-dark section-30 section-xl-top-60">
+            <h5>About Us</h5>
+            <h1 class="text-ubold">Overview</h1>
+            <ol class="breadcrumb">
+              <li><a href="{% url 'Home' %}">Home</a></li>
+              <!-- <li><a href="#">About</a></li> -->
+              <li>Overview
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="section-80 section-lg-120">
+        <div class="container container-wide text-xl-left">
+          <div class="row row-50 justify-content-xl-between">
+            <div class="col-xl-6 order-xl-1">
+              <div>
+                <div class="img-wrap">
+                  <figure><span class="icon mdi mdi-play-circle-outline" data-toggle="modal" data-target="#myModal"></span><img class="img-responsive center-block" src="{% static  'images/overview-01.jpg' %}" width="800" height="450" alt=""></figure>
+                </div>
+              </div>
+            </div>
+            {% for item in about %}
+            <div class="col-xl-5">
+              <div class="inset-xl-left-80">
+                <h5 class="text-info-dr">Our History</h5>
+                <h2 class="text-ubold">A Few Words About Us</h2>
+                <hr class="divider divider-lg-left divider-primary divider-80">
+                <p class="big text-base">{{item.content}}!</p>
+                <p>{{item.content_2}}</p>
+                {% if item.extra_content %}
+                <p> {{ item.extra_content }}</p>
+                {% endif %}
+                <!-- <a class="button button-primary" href="testimonials.html">view testimonials</a> -->
+              </div>
+              
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      <!-- <section class="section-80 section-xl-120 bg-image-01 context-dark">
+        <div class="container container-wide">
+          <div class="row">
+            <div class="col-lg-7 col-xxl-5 col-lg-preffix-4 col-xxl-preffix-5">
+              <blockquote class="quote">
+                <p>
+                  <q>{{item.content_2}}</q>
+                </p>
+                <p>
+                  <cite class="text-gray">John Smith, founder</cite>
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="section-80 section-lg-120">
+        <div class="container container-wide">
+          <h5 class="view-animate fadeInUpBigger delay-04 text-info-dr">Why People Choose Us</h5>
+          <h2 class="view-animate fadeInUpBigger delay-04 text-ubold">Our Advantages</h2>
+          <hr class="view-animate fadeInUpBigger delay-06 divider divider-primary divider-80">
+          <div class="row row-50">
+            <div class="col-md-6 col-lg-3 icon-box view-animate fadeInUpSmall delay-08"><span class="icon icon-lg text-primary-grad icon-primary icon-circle mdi mdi-airplane"></span>
+              <h5 class="text-bold">The Most Reliable<br class="d-none d-lg-block">Airlines</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-left-40 inset-xxl-right-40">We cooperate only with the most reliable airlines who can boast the perfect reputation.</p>
+            </div>
+            <div class="col-md-6 col-lg-3 icon-box view-animate fadeInUpSmall delay-08"><span class="icon icon-lg text-primary-grad icon-primary icon-circle mdi mdi-account-multiple"></span>
+              <h5 class="text-bold">More Than 7M Visitors<br class="d-none d-lg-block">Each Month</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-left-40 inset-xxl-right-40">More than 7 million people use our services to find and book airline tickets.</p>
+            </div>
+            <div class="col-md-6 col-lg-3 icon-box view-animate fadeInUpSmall delay-08"><span class="icon icon-lg text-primary-grad icon-primary icon-circle fa-search"></span>
+              <h5 class="text-bold">User-Friendly<br class="d-none d-lg-block">Search System</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-left-40 inset-xxl-right-40">Convenient and fast search for airline tickets, hotels and cars.</p>
+            </div>
+            <div class="col-md-6 col-lg-3 icon-box view-animate fadeInUpSmall delay-08"><span class="icon icon-lg text-primary-grad icon-primary icon-circle mdi mdi-calendar-multiple-check" style="font-size: 52px;"></span>
+              <h5 class="text-bold">Fast and Reliable<br class="d-none d-lg-block">Ticket Booking</h5>
+              <hr class="divider divider-info divider-50">
+              <p class="inset-xxl-left-40 inset-xxl-right-40">We provide reliable ticket booking system, which is also perfect for first-time travellers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-80 section-lg-120 bg-gray-lighter">
+        <div class="container container-wide">
+          <h5 class="text-info-dr">What People Say</h5>
+          <h2 class="text-ubold">Testimonials</h2>
+          <hr class="divider divider-primary divider-80">
+          <!-- Owl Carousel-->
+          <div class="owl-carousel owl-dots-lg text-left" data-dots="true" data-items="1" data-md-items="2" data-xl-items="3" data-margin="30" data-mouse-drag="false">
+                  <!-- Quote boxed style-->
+                  {% for item in testimonial %}
+                  <blockquote class="quote-boxed">
+                    <p>
+                      <q>{{item.content}}</q>
+                    </p>
+                    <div class="unit unit-spacing-xs flex-row align-items-center">
+                      <!-- <div class="unit-left">
+                        <img class="img-circle img-responsive center-block" src="{% static 'images/user-01.jpg' %}" width="70" height="70" alt="">
+                      </div> -->
+                      <div class="unit-body">
+                        <div class="text-base text-bold">{{item.name}}</div>
+                        <div class="text-gray text-italic">{{item.company_name}}</div>
+                      </div>
+                    </div>
+                  </blockquote>
+                  {% endfor %}
+          </div>
+        </div>
+      </section>
+{% endblock %}

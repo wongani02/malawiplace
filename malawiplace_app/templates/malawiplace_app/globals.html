@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+{% load static %}
+{% load custom_template_tags %}
+
+<head>
+    <!-- Site Title-->
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,900">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link
+      href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+
+
+
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <!-- Page-->
+    <div class="page text-center">
+        <!-- Page Header-->
+        <header class="page-header">
+            <!-- RD Navbar-->
+            <div class="rd-navbar-wrap bg-gray-dark">
+                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+                    data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="1px" data-xl-stick-up-offset="1px" data-xxl-stick-up-offset="1px" data-lg-stick-up="true" data-xl-stick-up="true"
+                    data-xxl-stick-up="true">
+                    <div class="rd-navbar-inner">
+                        <!-- RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <!-- RD Navbar Toggle-->
+                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                            <!-- RD Navbar Brand-->
+                            <div class="rd-navbar-brand">
+                                <a class="d-inline-block brand-name" href="index.html"><img class="img-responsive center-block" src="{% static 'images/logo-white.png' %}" width="166" height="55" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="rd-navbar-nav-wrap">
+                            <!-- RD Navbar Nav-->
+                            <ul class="rd-navbar-nav">
+                                
+                                <li><a href="{% url 'restrants' %}">RestaurantS</a></li>
+                                <li><a href="{% url 'events' %}">Events</a></li>
+                                {% if user.is_authenticated %}
+                                <li><a href="{% url 'logout' %}">logout</a></li>
+                                {% else %}
+                                <li><a href="{% url 'login' %}">login</a></li>
+                                {% endif %}
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        {% block content %} {% endblock %}
+
+        <!-- Page Footer-->
+        <footer class="google-map-wrapper">
+            <!--Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.-->
+            <!--Please note that YOUR_API_KEY should replaced with your key.-->
+            <!--Example: <div class="google-map-container" data-key="YOUR_API_KEY">-->
+            <!-- <div class="google-map-skew">
+              <div class="google-map-container google-map-align" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-zoom="5" data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png">
+                <div class="google-map"></div>
+                <ul class="google-map-markers">
+                  <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
+                </ul>
+              </div>
+            </div> -->
+            <div class="page-footer text-md-left">
+              <div class="container container-wide">
+                <div class="row row-50 section-60 section-xl-top-120">
+                  <div class="col-md-6 col-xl-2">
+                    <h5 class="text-bold">About Us</h5>
+                    {% about_footer %}...
+                  </div>
+                  <div class="col-md-6 col-xl-3">
+                    <div class="inset-xxl-left-50">
+                      <h5 class="text-bold">Links</h5>
+                      <ul class="group group-sm">
+                        <li><a class="button button-tag button-tag-info button-no-shadow" href="{% url 'Home' %}">Home</a></li>
+                        <li><a class="button button-tag button-tag-info button-no-shadow" href="{% url 'about' %}">About</a></li>
+                        <li><a class="button button-tag button-tag-info button-no-shadow" href="{% url 'events' %}">Events</a></li>
+                        <li><a class="button button-tag button-tag-info button-no-shadow" href="{% url 'restrants' %}">Restrants</a></li>
+                        <li><a class="button button-tag button-tag-info button-no-shadow" href="{% url 'blog' %}">Blog</a></li>
+                        <li><a class="button button-tag button-tag-info button-no-shadow" href="{% url 'contact' %}">Contact</a></li>
+                        <!-- <li><a class="button button-tag button-tag-info button-no-shadow" href="#">Flights</a></li>
+                        <li><a class="button button-tag button-tag-info button-no-shadow" href="#">Car Hire</a></li> -->
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-xl-3">
+                    <div class="inset-xxl-right-50">
+                      <h5 class="text-bold">Latest Blog Posts</h5>
+                      <!-- Owl Carousel-->
+                      <div class="owl-nav-variant-2 owl-carousel" data-nav="true" data-items="1" data-margin="30" data-mouse-drag="false">
+                        {% recent_blogs_footer %}
+
+                      </div>
+                    </div>
+                  </div>
+                  {% contact_footer %}
+                  
+                </div>
+              </div>
+              <div class="container container-wide page-footer-min">
+                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+              </div>
+            </div>
+          </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Java script-->
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    
+    
+    
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        // $(function () {
+        //     $('.datepicker').datepicker({
+        //         dateFormat: "yy-mm-dd"
+        //     });
+        // });
+
+        $( function() {
+        var from = $( ".fromDate" )
+            .datepicker({
+                dateFormat: "yy-mm-dd",
+                changeMonth: true
+            })
+            .on( "change", function() {
+                to.datepicker( "option", "minDate", getDate( this ) );
+            }),
+            to = $( ".toDate" ).datepicker({
+            dateFormat: "yy-mm-dd",
+            changeMonth: true
+            })
+            .on( "change", function() {
+            from.datepicker( "option", "maxDate", getDate( this ) );
+            });
+
+        function getDate( element ) {
+            var date;
+            var dateFormat = "yy-mm-dd";
+            try {
+            date = $.datepicker.parseDate( dateFormat, element.value );
+            } catch( error ) {
+            date = null;
+            }
+
+            return date;
+        }
+        });
+    </script>
+    
+
+</body>
+
+</html>

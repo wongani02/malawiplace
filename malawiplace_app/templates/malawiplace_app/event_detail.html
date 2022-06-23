@@ -1,0 +1,107 @@
+{% extends 'malawiplace_app/globals.html' %}
+{% load static %} 
+{% block content %}
+{% load custom_template_tags %}
+<section class="bg-image-06">
+  <div class="breadcrumb-wrapper">
+    <div class="container context-dark section-30 section-xl-top-120">
+      <h5>Event Detail</h5>
+      <h1 class="text-ubold">Event Post</h1>
+      <ol class="breadcrumb">
+        <li><a href="{% url 'Home' %}">Home</a></li>
+        <li><a href="{% url 'events' %}">Events</a></li>
+        <li>Event Post
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+      <section class="section-80 section-lg-120">
+        <div class="container container-wide text-lg-left">
+          <div class="row row-50 justify-content-sm-center justify-content-xxl-between">
+            <div class="order-lg-1 col-lg-7 col-xxl-7">
+              <div class="blog-post-item">
+                <h2 class="text-ubold">{{object.event_name}}</h2>
+                <div class="post-blog-meta">
+                  <ul class="group-lg">
+                    <li class="post-blog-tag"><span class="icon"></span><span class="text-base text">{{object.date}}</span></li>
+                    <li class="post-blog-comments"><span class="icon"></span><span class="text-base text">{{object.location}}</span></li>
+                    <li class="post-blog-views"><span class="icon"></span><span class="text-base text">684</span></li>
+                  </ul>
+                </div><img class="img-responsive center-block" src="{{object.img.url}}" width="1020" height="580" alt="">
+                <p>{{object.event_description|linebreaks}}</p>
+                <a class="button button-primary button-sm button-naira button-naira-up" href="{% url 'event-booking' object.id %}">Book For Event</a>
+              </div>
+              <div class="blog-post-item">
+                <h5 class="text-bold hr-title">Posted by</h5>
+                <div class="offset-top-30 text-md-left unit flex-column flex-md-row unit-spacing-sm">
+                  <div class="unit-left"><img class="img-responsive center-block" src="{% static 'images/user-17.jpg' %}" width="230" height="230" alt=""></div>
+                  <div class="unit-body">
+                    <h5 class="text-bold text-info-dr">Joseph Morrison</h5>
+                    <p class="text-italic text-gray-light">Traveler, Blogger</p>
+                    <p>I am a professional blogger interested in everything taking place in cyberspace. I am running this website and try my best to make it a better place to visit. I post only the articles that are related to the topic and thoroughly analyze all visitors’ comments to cater to their needs better.</p>
+                    <ul class="list-inline" id="comments">
+                      <li><a class="icon icon-xxs text-gray-light fa-facebook" href="#"></a></li>
+                      <li><a class="icon icon-xxs text-gray-light fa-twitter" href="#"></a></li>
+                      <li><a class="icon icon-xxs text-gray-light fa-pinterest-p" href="#"></a></li>
+                      <li><a class="icon icon-xxs text-gray-light fa-vimeo" href="#"></a></li>
+                      <li><a class="icon icon-xxs text-gray-light fa-google-plus" href="#"></a></li>
+                      <li><a class="icon icon-xxs text-gray-light fa-rss" href="#"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- <div class="blog-post-item" id="reply">
+                
+
+              </div> -->
+            </div>
+            <div class="col-lg-5 col-xxl-4">
+              <aside class="text-md-left">
+                <div class="row row-60 row-lg-90">
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">Search</h5>
+                    <!-- RD Search-->
+                    <form class="form-inline rd-search" action="search-results.html" method="GET">
+                      <div class="form-wrap">
+                        <label class="form-label" for="rd-search-form-input">Search</label>
+                        <input class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off">
+                      </div>
+                      <button class="button button-primary button-sm button-naira button-naira-up" type="submit"><span class="icon fa-search"></span><span>Search</span></button>
+                    </form>
+                  </div>
+                  
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">Gallery</h5>
+                    <div class="row row-sm-gutter" data-lightgallery="group">
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-4"><a class="thumbnail-img" data-lightgallery="item" data-size="800x450" href="{% static 'images/overview-01.jpg'%}"><img class="img-responsive center-block" src="{% static 'images/gallery-48.jpg'%}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-4"><a class="thumbnail-img" data-lightgallery="item" data-size="384x560" href="{% static 'images/post-36.jpg'%}"><img class="img-responsive center-block" src="{% static 'images/gallery-49.jpg'%}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-4"><a class="thumbnail-img" data-lightgallery="item" data-size="576x372" href="{% static 'images/gallery-20.jpg'%}"><img class="img-responsive center-block" src="{% static 'images/gallery-50.jpg'%}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-4"><a class="thumbnail-img" data-lightgallery="item" data-size="384x560" href="{% static 'images/post-43.jpg'%}"><img class="img-responsive center-block" src="{% static 'images/gallery-51.jpg'%}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-4"><a class="thumbnail-img" data-lightgallery="item" data-size="420x590" href="{% static 'images/gallery-28.jpg'%}"><img class="img-responsive center-block" src="{% static 'images/gallery-52.jpg'%}" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-sm-4 col-md-3 col-lg-4"><a class="thumbnail-img" data-lightgallery="item" data-size="420x590" href="{% static 'images/gallery-25.jpg'%}"><img class="img-responsive center-block" src="{% static 'images/gallery-53.jpg '%}" width="185" height="185" alt=""></a></div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">Tabs</h5>
+                    <ul class="group group-sm">
+                      <li><a class="button button-tag button-no-shadow" href="#">articles</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">news</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">travel</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">london</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">new york</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">Paris</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">airlines</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">british airlines</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+ {% endblock %}

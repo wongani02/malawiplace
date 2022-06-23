@@ -1,0 +1,15 @@
+{% for item in contact %}
+<div class="col-md-6 col-xl-2" style="z-index: 99;">
+    <h5 class="text-bold">Contact Information</h5>
+    <div class="text-left">
+      <div class="unit flex-row unit-spacing-15">
+        <div class="unit-left"><span class="text-white icon icon-sm mdi mdi-map-marker"></span></div>
+        <div class="unit-body"><a class="text-gray-light" href="#">{{item.address}},<br class="d-none d-xl-block">{{item.location}}</a></div>
+      </div>
+      <div class="unit flex-row unit-spacing-15">
+        <div class="unit-left"><span class="text-white icon icon-sm mdi mdi-phone"></span></div>
+        <div class="unit-body"><a class="text-gray-light" href="tel:{{item.phone_number}}">{{item.phone_number}}</a></div>
+      </div>
+    </div>
+  </div>
+{% endfor %}

@@ -1,0 +1,139 @@
+{% extends 'malawiplace_app/globals.html' %}
+{% load static %} 
+{% block content %}
+{% load custom_template_tags %}
+            <section class="bg-image-06">
+              <div class="breadcrumb-wrapper">
+                <div class="container context-dark section-30 section-xl-top-120">
+                  <h5>Choose your style</h5>
+                  <h1 class="text-ubold">Forms</h1>
+                  <ol class="breadcrumb">
+                    <!-- <li><a href="{% url 'Home' %}">Home</a></li> -->
+                    <!-- <li><a href="">Pages</a></li> -->
+                    <li>Booking
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+
+      <section class="section-90 section-lg-top-120">
+        <div class="container">
+          <h2 class="text-ubold">Forms</h2>
+          <hr class="divider divider-primary divider-80 divider-offset">
+          <p>With forms you can get almost any kind of information from<br class="d-none d-lg-block">your visitors, who will definitely appreciate this attractive element.</p>
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+          {% endfor %}
+          {% endif %}
+          <div class="section-top-80 section-lg-top-90">
+            <h4 class="text-bold text-capitalize">contact us</h4>
+            <div class="row row-offset-1 justify-content-sm-center">
+              <div class="col-lg-8">
+                <!-- RD Mailform-->
+               <form class="rd-mailform rd-form text-left" method="post" action="">
+                {% csrf_token %}
+                  {{form.as_p}}
+                  {{form.errors}}
+                  <br>
+                  <button class="button button-primary button-sm">Submit</button>
+
+                </form> 
+                {% if messages %}
+                  {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                  </div>
+                  {% endfor %}
+                {% endif %}
+                {% comment %}
+                <form class="rd-mailform rd-form text-left"   method="post" action="{% url 'success' %}">
+                  {% csrf_token %}
+                <div class="row row-20">
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-name">First name</label>
+                      {{ form.customer_name}}
+                      <!-- <input class="form-input form-input-gray" type="text" name="name" data-constraints="@Required"> -->
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-surname">Email</label>
+                      {{form.email}}
+                      <!-- <input class="form-input form-input-gray" value="{{room.room_category}}" type="text" name="room-type" data-constraints="@Required"> -->
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-email">Phone Number</label>
+                      {{form.phone_number}}
+                      <!-- <input class="form-input form-input-gray" type="email" name="email" data-constraints="@Required @Email"> -->
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-phone">number of rooms</label>
+                      {{form.number_of_rooms}}
+                      <!-- <input class="form-input form-input-gray" type="text" name="phone" data-constraints="@Required @Integer"> -->
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-wrap">
+                        <label class="form-label-outside" for="contact-email">Check in</label>
+                        {{form.check_in}}
+                        <!-- <input class="form-input form-input-gray datepicker fromDate" type="" name="check-in" data-constraints="@Required "> -->
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-wrap">
+                        <label class="form-label-outside" for="contact-phone">Check out</label>
+                        {{form.check_out}}
+                        <!-- <input class="form-input form-input-gray datepicker toDate"  type="text" name="check-out" data-constraints="@Required @Integer"> -->
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-6">
+                      <div class="form-wrap">
+                        <label class="form-label-outside" for="contact-email">Number of beds</label>
+                        {{form.num_of_beds}}
+                        <input class="form-input form-input-gray" value="{{room.num_of_beds}}" name="num-of-beds" data-constraints="@Required @Integer">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-wrap">
+                        <label class="form-label-outside" for="contact-phone">Number of rooms</label>
+                        {{form.number_of_rooms}}
+                        <input class="form-input form-input-gray" type="text" name="num-of-rooms" data-constraints="@Required @Integer">
+                      </div>
+                    </div> -->
+                    <div class="col-md-6">
+                      <div class="form-wrap">
+                        <!-- <label class="form-label-outside" for="contact-name">Hotel name</label> -->
+                        <!-- {{ form.customer_name}} -->
+                        <!-- <input class="form-input form-input-gray" value="{{room.hotel.hotel_name}}" type="text" name="hotel-name" data-constraints="@Required"> -->
+                      </div>
+                    </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <label class="form-label-outside" for="contact-message">Additional Reservations</label>
+                      {{form.additional_reservations}}
+                      <!-- <textarea class="form-input form-input-gray"  name="add-ons" ></textarea> -->
+                    </div>
+                    <button class="button button-primary button-sm" style="min-width: 140px;" type="submit">Submit</button>
+                    <!-- {{form.errors}} -->
+                  </div>
+                </div>
+              </form>
+              {% endcomment %}
+              </div>
+            
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+ {% endblock %}

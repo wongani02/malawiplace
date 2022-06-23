@@ -1,0 +1,61 @@
+{% extends 'malawiplace_app/globals.html' %}
+{% load static %} 
+{% block content %}
+{% load custom_template_tags %}
+            <section class="bg-image-06">
+              <div class="breadcrumb-wrapper">
+                <div class="container context-dark section-30 section-xl-top-120">
+                  <h5>Book your event</h5>
+                  <h1 class="text-ubold"></h1>
+                  <ol class="breadcrumb">
+                    <!-- <li><a href="{% url 'Home' %}">Home</a></li> -->
+                    <!-- <li><a href="">Pages</a></li> -->
+                    <li>Booking
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+
+      <section class="section-90 section-lg-top-120">
+        <div class="container">
+          <h2 class="text-ubold">Event Booking Form</h2>
+          <hr class="divider divider-primary divider-80 divider-offset">
+          <p>With forms you can get almost any kind of information from<br class="d-none d-lg-block">your visitors, who will definitely appreciate this attractive element.</p>
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+          </div>
+          {% endfor %}
+          {% endif %}
+          <div class="section-top-80 section-lg-top-90">
+            <!-- <h4 class="text-bold text-capitalize">contact us</h4> -->
+            <div class="row row-offset-1 justify-content-sm-center">
+              <div class="col-lg-8">
+                <!-- RD Mailform-->
+               <form class="rd-mailform rd-form text-left" method="post" action=".">
+                {% csrf_token %}
+                  {{form.as_p}}
+                  {{form.errors}}
+                  <br>
+                  <button class="button button-primary button-sm">Submit</button>
+
+                </form> 
+                {% if messages %}
+                  {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                  </div>
+                  {% endfor %}
+                {% endif %}
+                
+              </div>
+            
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+ {% endblock %}

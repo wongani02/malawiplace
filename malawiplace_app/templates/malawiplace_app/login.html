@@ -1,0 +1,45 @@
+{% extends 'malawiplace_app/globals.html' %}
+{% load static %} 
+{% block content %}
+{% load crispy_forms_tags %}
+            <section class="bg-image-06">
+              <div class="breadcrumb-wrapper">
+                <div class="container context-dark section-30 section-xl-top-120">
+                  <h5>Enter the World of Travel</h5>
+                  <h1 class="text-ubold">Login/Register</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="{% url 'Home' %}">Home</a></li>
+                    <li><a href="{% url 'login' %}">login</a></li>
+                    <li>Login/Register
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+      <section class="section-80 section-lg-120">
+        <div class="container">
+          <ul class="nav-custom">
+            <li><a class="active" href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+          </ul>
+          <div class="row row-offset-2 justify-content-sm-center">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+              <!-- RD Mailform-->
+              <!-- RD Mailform-->
+              <form method="post" action="{% url 'login' %}" class="">
+                {% csrf_token %}
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="login">Username </label>
+                  <input class="form-input form-input-gray" type="text" name="username" >
+                </div>
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="password">Password</label>
+                  <input class="form-input form-input-gray" type="password" name="password" >
+                </div>
+                <button class="button button-primary button-block button-sm" >sign in</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

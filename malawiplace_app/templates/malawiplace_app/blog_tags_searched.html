@@ -1,0 +1,13 @@
+{% for item in blog %}
+<div class="col-md-10 col-lg-6 col-xl-12">
+                        
+    <div class="unit flex-column flex-md-row">
+      <div class="unit-left"><img class="center-block img-responsive" src="{{item.img.url}}" width="180" height="110" alt=""></div>
+      <div class="unit-body">
+        <h5 class="text-bold" style="line-height: 28px;"><a class="text-info-dr" href="{% url 'blog_single' item.id %}">{{item.title}}<br class='veil.d-xl-block'></a></h5>
+        <hr class="divider divider-wide">
+        <p><span class="text-middle text-gray-light icon icon-xs mdi mdi-calendar-clock"></span><span class="text-middle inset-left-8">{{item.date}}</span></p>
+      </div>
+    </div>
+</div>
+{% endfor %}

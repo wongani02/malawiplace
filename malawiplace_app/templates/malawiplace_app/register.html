@@ -1,0 +1,62 @@
+{% extends 'malawiplace_app/globals.html' %}
+{% load static %} 
+{% block content %}
+{% load crispy_forms_tags %}
+            <section class="bg-image-06">
+              <div class="breadcrumb-wrapper">
+                <div class="container context-dark section-30 section-xl-top-120">
+                  <h5>Enter the World of Travel</h5>
+                  <h1 class="text-ubold">Login/Register</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li>Login/Register
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+      <section class="section-80 section-lg-120">
+        <div class="container">
+          <ul class="nav-custom">
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a class="active" href="{% url 'register' %}">Register</a></li>
+          </ul>
+          <div class="row row-offset-2 justify-content-sm-center">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+              <!-- RD Mailform-->
+              <form class="rd-mailform rd-form text-left"  method="post" action="{% url 'register' %}">
+                {% csrf_token %}
+						    <!-- {% crispy form %} -->
+                 <div class="form-wrap">
+                  <label class="form-label-outside" for="login">Username</label>
+                  {{ form.username }}
+                  <!-- <input class="form-input form-input-gray" type="text" name="login"> -->
+                </div>
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="email">E-mail</label>
+                  {{ form.email }}
+                  <!-- <input class="form-input form-input-gray"  type="text" name="email" > -->
+                </div>
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="password">Password</label>
+                  {{ form.password1 }}
+                  <!-- <input class="form-input form-input-gray" id="password" type="password" name="password" data-constraints="@Required"> -->
+                </div>
+                <div class="form-wrap">
+                  <label class="form-label-outside" for="password2">Confirm Password</label>
+                  {{ form.password2 }}
+                  <!-- <input class="form-input form-input-gray" id="password2" type="password" name="password2" data-constraints="@Required"> -->
+                </div>
+                <!-- <button  class="button button-primary button-block button-sm" type="submit">registration</button>  -->
+                <!-- <button type="submit" class="button button-primary button-block button-sm">
+                    Submit
+                </button> -->
+                <input class="button button-primary button-block button-sm" type="submit" value="Submit"/>
+              
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      {%  endblock  %}

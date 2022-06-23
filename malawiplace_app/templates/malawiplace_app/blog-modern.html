@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Modern Blog</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Header-->
+      <header class="page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap bg-gray-dark">
+          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="1px" data-xl-stick-up-offset="1px" data-xxl-stick-up-offset="1px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="d-inline-block brand-name" href="index.html"><img class="img-responsive center-block" src="images/logo-white.png" width="166" height="55" alt=""></a></div>
+              </div>
+              <div class="rd-navbar-nav-wrap">
+                <!-- RD Navbar Nav-->
+                <ul class="rd-navbar-nav">
+                  <li><a href="./">Home</a></li>
+                  <li><a href="#">About</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="overview.html">Overview</a></li>
+                      <li><a href="testimonials.html">Testimonials</a></li>
+                      <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                  </li>
+                  <li class="active"><a href="#">Blog</a>
+                    <!-- RD Navbar Dropdown-->
+                    <ul class="rd-navbar-dropdown">
+                      <li><a href="blog-classic.html">Classic blog</a></li>
+                      <li><a href="blog-grid.html">Grid blog</a></li>
+                      <li><a href="blog-masonry.html">Masonry blog</a></li>
+                      <li><a href="blog-modern.html">Modern blog</a></li>
+                      <li><a href="blog-modern-2.html">Modern blog v.2</a></li>
+                      <li><a href="blog-single-post.html">Blog single post</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Pages</a>
+                    <!-- RD Navbar Megamenu-->
+                    <ul class="rd-navbar-megamenu">
+                      <li>
+                        <h5>Home</h5>
+                        <ul>
+                          <li><a href="index.html">Home variant 1</a></li>
+                          <li><a href="index-2.html">Home variant 2</a></li>
+                          <li><a href="index-3.html">Home variant 3</a></li>
+                        </ul>
+                        <h5>Gallery</h5>
+                        <ul>
+                          <li><a href="gallery-cobbles.html">Cobbles gallery</a></li>
+                          <li><a href="gallery-grid.html">Grid gallery</a></li>
+                          <li><a href="gallery-gallery-full.html">Grid gallery fullwidth</a></li>
+                          <li><a href="gallery-masonry.html">Masonry gallery</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h5>Extras</h5>
+                        <ul>
+                          <li><a href="404.html">404</a></li>
+                          <li><a href="503.html">503</a></li>
+                          <li><a href="maintenance.html">Maintenance</a></li>
+                          <li><a href="soon.html">Coming Soon</a></li>
+                          <li><a href="login.html">Login/Register</a></li>
+                          <li><a href="sitemap.html">Site Map</a></li>
+                          <li><a href="tickets.html">Tickets list</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h5>Elements</h5>
+                        <ul>
+                          <li><a href="grid.html">Grid</a></li>
+                          <li><a href="tables.html">Tables</a></li>
+                          <li><a href="bars.html">Progress bars</a></li>
+                          <li><a href="tabs.html">Tabs & Accordions</a></li>
+                          <li><a href="forms.html">Forms</a></li>
+                          <li><a href="buttons.html">Buttons</a></li>
+                          <li><a href="typography.html">Typography</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h5>Layouts</h5>
+                        <ul>
+                          <li><a href="header-default.html">Header default</a></li>
+                          <li><a href="header-minimal.html">Header minimal</a></li>
+                          <li><a href="header-wide.html">Header wide</a></li>
+                          <li><a href="footer-default.html">Footer default</a></li>
+                          <li><a href="footer-corp.html">Footer corporate</a></li>
+                          <li><a href="footer-widget.html">Footer widget</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+                <!--RD Navbar Search-->
+                <div class="rd-navbar-search"><a class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search" href="#"><span class="fa-search"></span></a>
+                  <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                    <div class="form-wrap">
+                      <label class="form-label" for="rd-navbar-search-form-input">Search</label>
+                      <input class="form-input rd-navbar-search-form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                    </div>
+                    <button class="button fa-search"></button>
+                    <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+            <section class="bg-image-06">
+              <div class="breadcrumb-wrapper">
+                <div class="container context-dark section-30 section-xl-top-120">
+                  <h5>Our Latest News</h5>
+                  <h1 class="text-ubold">Modern Blog</h1>
+                  <ol class="breadcrumb">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li>Modern Blog
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+      <section class="section-80 section-lg-120 bg-gray-lighter">
+        <div class="container container-wide text-lg-left">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="order-lg-1 col-lg-7 col-xl-8 col-xxl-7 col-xxl-preffix-1">
+                    <!-- Post modern style-->
+                    <div class="post-blog-modern post">
+                      <div class="post-blog-modern-top">
+                        <div class="unit flex-md-row flex-xl-column align-items-center text-md-left text-xl-center">
+                          <div class="unit-left">
+                            <div class="post-author-img"><img class="img-responsive center-block" src="images/user-15.jpg" width="120" height="120" alt=""></div>
+                          </div>
+                          <div class="unit-body">
+                            <div class="text-bold text-info-dr">Joseph Morrison</div>
+                            <div class="text-italic">Sep 21, 2019 at 4:03pm</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="post-blog-modern-body"><a class="d-block" href="blog-single-post.html"><img class="img-responsive center-block post-blog-modern-img" src="images/post-11.jpg" width="680" height="424" alt=""></a>
+                        <h4 class="post-blog-modern-title text-bold"><a class="text-info-dr" href="blog-single-post.html">9 Ways to Become a Successful Travel Blogger</a></h4>
+                        <p>Travel blogging is a crowded field — and it gets more crowded day by day. And a lot of the advice that people give are actually counterintuitive to your success. It takes a lot of hard work to be successful in this industry...</p>
+                        <div class="row row-20 justify-content-end-xs-middle">
+                          <div class="col-md-8 text-md-right order-md-1">
+                            <div class="post-blog-modern-comments"><span class="icon"></span><span class="text">23 Comments</span></div>
+                            <div class="post-blog-modern-views"><span class="icon"></span><span class="text">684 Views</span></div>
+                          </div>
+                          <div class="col-md-4 text-md-left"><a class="button button-primary button-xs" href="blog-single-post.html">read more</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Post modern style-->
+                    <div class="post-blog-modern post">
+                      <div class="post-blog-modern-top">
+                        <div class="unit flex-md-row flex-xl-column align-items-center text-md-left text-xl-center">
+                          <div class="unit-left">
+                            <div class="post-author-img"><img class="img-responsive center-block" src="images/user-15.jpg" width="120" height="120" alt=""></div>
+                          </div>
+                          <div class="unit-body">
+                            <div class="text-bold text-info-dr">Joseph Morrison</div>
+                            <div class="text-italic">Sep 21, 2019 at 4:03pm</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="post-blog-modern-body"><a class="d-block" href="blog-single-post.html"><img class="img-responsive center-block post-blog-modern-img" src="images/post-12.jpg" width="680" height="424" alt=""></a>
+                        <h4 class="post-blog-modern-title text-bold"><a class="text-info-dr" href="blog-single-post.html">Visiting Paris on a Budget</a></h4>
+                        <p>Paris is one of top-rated European cities – people  usually try to spend there as much time as possible, and you also may be lucky enough to spend an autumn house-sitting there. But even if you have somewhere...</p>
+                        <div class="row row-20 justify-content-end-xs-middle">
+                          <div class="col-md-8 text-md-right order-md-1">
+                            <div class="post-blog-modern-comments"><span class="icon"></span><span class="text">23 Comments</span></div>
+                            <div class="post-blog-modern-views"><span class="icon"></span><span class="text">684 Views</span></div>
+                          </div>
+                          <div class="col-md-4 text-md-left"><a class="button button-primary button-xs" href="blog-single-post.html">read more</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Post modern style-->
+                    <div class="post-blog-modern post">
+                      <div class="post-blog-modern-top">
+                        <div class="unit flex-md-row flex-xl-column align-items-center text-md-left text-xl-center">
+                          <div class="unit-left">
+                            <div class="post-author-img"><img class="img-responsive center-block" src="images/user-15.jpg" width="120" height="120" alt=""></div>
+                          </div>
+                          <div class="unit-body">
+                            <div class="text-bold text-info-dr">Joseph Morrison</div>
+                            <div class="text-italic">Sep 21, 2019 at 4:03pm</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="post-blog-modern-body"><a class="d-block" href="blog-single-post.html"><img class="img-responsive center-block post-blog-modern-img" src="images/post-13.jpg" width="680" height="424" alt=""></a>
+                        <h4 class="post-blog-modern-title text-bold"><a class="text-info-dr" href="blog-single-post.html">How to Make Travel Videos</a></h4>
+                        <p>Introducing our new Travel Video Course, taught by experts Sharon Carpenter and Beverly Bennett! They have over 31,000,000 YouTube views, have worked with big brands, tourism boards, and production...</p>
+                        <div class="row row-20 justify-content-end-xs-middle">
+                          <div class="col-md-8 text-md-right order-md-1">
+                            <div class="post-blog-modern-comments"><span class="icon"></span><span class="text">23 Comments</span></div>
+                            <div class="post-blog-modern-views"><span class="icon"></span><span class="text">684 Views</span></div>
+                          </div>
+                          <div class="col-md-4 text-md-left"><a class="button button-primary button-xs" href="blog-single-post.html">read more</a></div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="col-lg-5 col-xl-4 col-xxl-3">
+              <aside class="text-md-left">
+                <div class="row row-60 row-lg-90">
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">Search</h5>
+                    <!-- RD Search-->
+                    <form class="form-inline rd-search" action="search-results.html" method="GET">
+                      <div class="form-wrap">
+                        <label class="form-label" for="rd-search-form-input">Search</label>
+                        <input class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off">
+                      </div>
+                      <button class="button button-primary button-sm button-naira button-naira-up" type="submit"><span class="icon fa-search"></span><span>Search</span></button>
+                    </form>
+                  </div>
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">Archive</h5>
+                    <div class="row row-20">
+                      <div class="col-lg-6 col-sm-6">
+                        <ul class="list-marked list-marked-no-padding">
+                          <li><a class="text-info-dr" href="#">October 2018</a></li>
+                          <li><a class="text-info-dr" href="#">December 2018</a></li>
+                          <li><a class="text-info-dr" href="#">February 2019</a></li>
+                          <li><a class="text-info-dr" href="#">April 2019</a></li>
+                          <li><a class="text-info-dr" href="#">June 2019</a></li>
+                          <li><a class="text-info-dr" href="#">August 2019</a></li>
+                          <li><a class="text-info-dr" href="#">October 2019</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-6 col-sm-6">
+                        <ul class="list-marked list-marked-no-padding">
+                          <li><a class="text-info-dr" href="#">November 2018</a></li>
+                          <li><a class="text-info-dr" href="#">January 2019</a></li>
+                          <li><a class="text-info-dr" href="#">March 2019</a></li>
+                          <li><a class="text-info-dr" href="#">May 2019</a></li>
+                          <li><a class="text-info-dr" href="#">July 2019</a></li>
+                          <li><a class="text-info-dr" href="#">September 2019</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">Gallery</h5>
+                    <div class="row row-md-gutter" data-lightgallery="group">
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="800x450" href="images/overview-01.jpg"><img class="img-responsive center-block" src="images/gallery-48.jpg" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="384x560" href="images/post-36.jpg"><img class="img-responsive center-block" src="images/gallery-49.jpg" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="576x372" href="images/gallery-20.jpg"><img class="img-responsive center-block" src="images/gallery-50.jpg" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="384x560" href="images/post-43.jpg"><img class="img-responsive center-block" src="images/gallery-51.jpg" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="420x590" href="images/gallery-28.jpg"><img class="img-responsive center-block" src="images/gallery-52.jpg" width="185" height="185" alt=""></a></div>
+                      <div class="col-6 col-lg-4 col-sm-3"><a class="thumbnail-img" data-lightgallery="item" data-size="420x590" href="images/gallery-25.jpg"><img class="img-responsive center-block" src="images/gallery-53.jpg" width="185" height="185" alt=""></a></div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">About</h5>
+                    <p>SkyBooking is the world’s first inspirational travel search service that focuses on what’s really important: your Interests and your Budget!</p>
+                    <p>How practical is an amazing weekend break for skiing if what you really look forward is relaxing on a sandy beach? How good a great destination can be, if it’s too expensive to get there? SkyBooking offers an innovative and useful online experience, so you can find your perfect destination in just a couple of clicks!</p>
+                  </div>
+                  <div class="col-12">
+                    <h5 class="text-bold hr-title">Tabs</h5>
+                    <ul class="group group-sm">
+                      <li><a class="button button-tag button-no-shadow" href="#">articles</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">news</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">travel</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">london</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">new york</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">Paris</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">airlines</a></li>
+                      <li><a class="button button-tag button-no-shadow" href="#">british airlines</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page Footer-->
+      <footer class="page-footer">
+        <div class="container container-wide text-md-left">
+          <div class="row row-50 section-60 section-lg-90">
+            <div class="col-md-6 col-xl-3"><a class="d-inline-block" href="./"><img class="img-responsive center-block" src="images/logo-white.png" width="166" height="55" alt=""></a>
+              <p>SkyBooking is a travel search engine which instantly searches all available flight, bus and train prices on an exhaustive number of travel sites such as online travel agencies, major and low-cost airlines and tour-operators. We also compare hotel rooms and car rental deals. You can easily narrow down your search as much (or as little!) as you want. That means that if the trip you'd like is anywhere out there, you'll find it right away.</p>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <h5 class="text-bold">Latest Blog Posts</h5>
+              <hr class="divider divider-50 divider-info divider-sm-left">
+              <div class="unit flex-column flex-md-row">
+                <div class="unit-left"><img class="img-responsive center-block" src="images/footer-01.jpg" width="100" height="10" alt=""></div>
+                <div class="unit-body"><span class="extra-small">Sep 8, 2019</span>
+                  <p class="text-bold"><a href="blog-single-post.html">How These 5 People Found The Path to Their Dream Trip</a></p>
+                </div>
+              </div>
+              <div class="unit flex-column flex-md-row">
+                <div class="unit-left"><img class="img-responsive center-block" src="images/footer-02.jpg" width="100" height="10" alt=""></div>
+                <div class="unit-body"><span class="extra-small">Sep 8, 2019</span>
+                  <p class="text-bold"><a href="blog-single-post.html">The Ultimate Packing List for Female Travelers: 10 Useful Tips</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="inset-xxl-left-50">
+                <h5 class="text-bold">What People Say</h5>
+                <hr class="divider divider-50 divider-info divider-sm-left">
+                <!-- Owl Carousel-->
+                <div class="owl-carousel owl-dots-left owl-dots-white" data-dots="true" data-items="1" data-margin="30" data-mouse-drag="false">
+                  <blockquote class="quote quote-sm">
+                    <p>
+                      <q>“I must tell you how impressed I am by your customer service. I have contacted you twice now and each time I received a prompt reply plus the additional attention of a manager. I have never received this kind of response from any other airline tickets booking site.”</q>
+                    </p>
+                    <p>
+                      <cite>Phillip Holland</cite>
+                    </p>
+                  </blockquote>
+                  <blockquote class="quote quote-sm">
+                    <p>
+                      <q>“I found your web site very easy to use. The entire process was very quick, and the price of my ticket was very affordable.”</q>
+                    </p>
+                    <p>
+                      <cite>Amber Barnett</cite>
+                    </p>
+                  </blockquote>
+                  <blockquote class="quote quote-sm">
+                    <p>
+                      <q>“Thank you for making it so easy. I really love the way I can view the itinerary and put payment info on the same page!”</q>
+                    </p>
+                    <p>
+                      <cite>Ralph Green</cite>
+                    </p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="inset-xxl-left-50">
+                <h5 class="text-bold">Contact Us</h5>
+                <hr class="divider divider-50 divider-info divider-sm-left">
+                <!-- RD Mailform-->
+                <form class="rd-mailform rd-form text-md-left" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <div class="form-wrap form-wrap-sm">
+                    <label class="text-gray-light form-label" for="footer-name">Your name</label>
+                    <input class="form-input form-input-dark" id="footer-name" type="text" name="name" data-constraints="@Required">
+                  </div>
+                  <div class="form-wrap form-wrap-sm">
+                    <label class="text-gray-light form-label" for="footer-email">Your e-mail</label>
+                    <input class="form-input form-input-dark" id="footer-email" type="email" name="email" data-constraints="@Email @Required">
+                  </div>
+                  <div class="form-wrap form-wrap-sm">
+                    <label class="text-gray-light form-label" for="footer-message">Message</label>
+                    <textarea class="form-input form-input-dark" id="footer-message" style="height: 90px;" name="message" data-constraints="@Required"></textarea>
+                  </div>
+                  <button class="button button-primary button-xs button-naira button-naira-up" type="submit"><span class="icon fa-envelope-o"></span><span>Send</span></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container container-wide page-footer-min small">
+          <div class="row row-20 justify-content-end-xs-middle">
+            <div class="col-md-6 text-md-left">
+              <ul class="list-inline">
+                <li><a class="icon fa-facebook" href="#"></a></li>
+                <li><a class="icon fa-twitter" href="#"></a></li>
+                <li><a class="icon fa-pinterest-p" href="#"></a></li>
+                <li><a class="icon fa-vimeo" href="#"></a></li>
+                <li><a class="icon fa-google-plus" href="#"></a></li>
+                <li><a class="icon fa-rss" href="#"></a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 text-md-right">
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Java script-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+{% for item in about %}
+<p>{{item.content|slice:":100"|safe}}</p>
+{% endfor %}
